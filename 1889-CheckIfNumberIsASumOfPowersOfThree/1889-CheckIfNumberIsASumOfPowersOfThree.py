@@ -1,0 +1,10 @@
+# Last updated: 7/21/2026, 7:08:33 PM
+class Solution(object):
+    def checkPowersOfThree(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
+        if n == 1: return True
+        if n % 3 in [0, 1]: return self.checkPowersOfThree(n/3)
+        else: return False
